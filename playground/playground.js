@@ -16,7 +16,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', function(err, client){
         if(err){
             console.log('Unable to connect to the mongoDB');
         }
-            console.log(result.ops);   
+            console.log(result.ops);  /*OPS attribute is gonna store all the attributes of the documents*/ 
     
         client.close();
     });
