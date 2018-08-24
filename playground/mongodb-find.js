@@ -6,10 +6,10 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', function(err, client){
     }
     console.log('Connected to MongoDB server');
 
-db.collection('Users').find({name: 'Nilesh'}).count().then((count) => {
-    console.log(`Todos count: $(count)`);
-}, (err) =>{
-    console.log('Unable to fetch todos', err)
-});
+    var db = client.db('TodoApp');
+
+    db.collection('Users').find({name: 'nilesh'}).toArray().then((docs) => {
+    console.log(JSON.stringify(docs, undefined,  2));
+    });
 
 });
