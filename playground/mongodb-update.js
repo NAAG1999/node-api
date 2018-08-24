@@ -10,6 +10,10 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', function(err, client){
     var db = client.db('TodoApp'); //name of the database
 
     db.collection('Users').findOneAndUpdate({
-        _id: new ObjectID
+        _id: new ObjectID('5b7f67ecee85ff28ae80714a')
+    },{
+        $set:{
+            name: "Nilesh"
+        }
     })
 });
