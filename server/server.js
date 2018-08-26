@@ -20,11 +20,11 @@ var newTodo = new Todo({ //constructor is made here
     text: 'Some text here for the database',
     completed: true,
     completedAt: 111
-})
+});
 
-newTodo.save().then((doc) =>{ // .then is a promise and is executed when the newTodo function is called or its work is done
-    console.log(JSON.stringify('Entered values are', doc))
+newTodo.save().then((doc) =>{ // .then is a promise and is executed when the newTodo function is called or its work is done 
+    console.log(JSON.stringify(doc, undefined ,2));
 }, (e) => {
-    console.log('Error', e)
+    console.log('Error', e);
 });
 
