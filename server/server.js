@@ -22,5 +22,9 @@ var newTodo = new Todo({
     completedAt: 111
 })
 
-
+newTodo.save().then((doc) =>{
+    console.log(JSON.stringify('Entered values are', doc))
+}, (e) => {
+    console.log('Error', e)
+});
 
