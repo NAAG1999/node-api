@@ -14,5 +14,13 @@ var Todo = mongoose.model('Todo',{
     completedAt:{
         type: Number
     }
+});
+
+var newTodo = new Todo({
+    text: 'Some text here for the database',
+    completed: true,
+    completedAt: 111
 })
+
+
 
